@@ -28,14 +28,14 @@ let windowWidth = window.innerWidth,
     maxScore = localStorage.getItem(storeScore);
 
     if (rod === "null" || maxScore === "null") {
-        alert("This is the first time you are playing this game. LET'S START");
+        alert("This is the first time you are playing this game. LET'S START.  Use 'a'to go left 'd'to go right and 'enter' to start the game");
         maxScore = 0;
         rod = "Rod1"
     } else {
-        alert(rod + " has maximum score of " + maxScore * 100);
+        alert(rod + " has maximum score of " + maxScore * 100 + "  Use 'a'to go left 'd'to go right and 'enter' to start the game");
     }
 
-    resetBoard(rod);
+    resetBoard(rod="Rod1");
 })();
 
 
@@ -81,7 +81,7 @@ function storeWin(rod, score) {
 
 
 window.addEventListener('keypress', function () {
-    let rodSpeed = 20;
+    let rodSpeed = 25;
 
     let rodRect = rod1.getBoundingClientRect();
 
