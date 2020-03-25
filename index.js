@@ -30,12 +30,12 @@ let windowWidth = window.innerWidth,
     if (rod === "null" || maxScore === "null") {
         alert("This is the first time you are playing this game. LET'S START.  Use 'a'to go left 'd'to go right and 'enter' to start the game");
         maxScore = 0;
-        rod = "Rod1"
+        rod = "Rod1";
     } else {
         alert(rod + " has maximum score of " + maxScore * 100 + "  Use 'a'to go left 'd'to go right and 'enter' to start the game");
+        
     }
-
-    resetBoard(rod="Rod1");
+    resetBoard(rod);
 })();
 
 
@@ -43,7 +43,7 @@ let windowWidth = window.innerWidth,
 function resetBoard(rodName) {
 
     rod1.style.left = (window.innerWidth - rod1.offsetWidth) / 2 + 'px';
-    rod2.style.left = (window.innerWidth - rod2.offsetWidth) / 2 + 'px';
+     rod2.style.left = (window.innerWidth - rod2.offsetWidth) / 2 + 'px';
     ball.style.left = (windowWidth - ball.offsetWidth) / 2 + 'px';
 
 
@@ -52,8 +52,10 @@ function resetBoard(rodName) {
         ball.style.top = (rod1.offsetTop + rod1.offsetHeight) + 'px';
         ballSpeedY = 2;
     } else if (rodName === rod1Name) {
-        ball.style.top = (rod2.offsetTop - rod2.offsetHeight) + 'px';
-        ballSpeedY = -2;
+        // ball.style.top = (rod2.offsetTop - rod2.offsetHeight) + 'px';
+        // ballSpeedY = -2;
+        ball.style.top = (rod1.offsetTop + rod1.offsetHeight) + 'px';
+        ballSpeedY = 2;
     }
 
     score = 0;
