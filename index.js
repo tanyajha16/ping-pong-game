@@ -28,11 +28,11 @@ let windowWidth = window.innerWidth,
     maxScore = localStorage.getItem(storeScore);
 
     if (rod === "null" || maxScore === "null") {
-        alert("This is the first time you are playing this game. LET'S START.  Use 'a'to go left 'd'to go right and 'enter' to start the game");
+        alert("This is the first time you are playing this game. LET'S START. Use 'a'to go left 'd'to go right and 'enter' to start the game .Created by TANY JHA");
         maxScore = 0;
         rod = "Rod1";
     } else {
-        alert(rod + " has maximum score of " + maxScore * 100 + "  Use 'a'to go left 'd'to go right and 'enter' to start the game");
+        alert(rod + " has maximum score of " + maxScore * 100 + "  Use 'a'to go left 'd'to go right and 'enter' to start the game. Created by TANYA JHA");
         
     }
     resetBoard(rod);
